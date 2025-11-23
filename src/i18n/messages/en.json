@@ -1,0 +1,176 @@
+{
+  "common": {
+    "appName": "OkabaliTravel",
+    "currency": "USD",
+    "search": "Search",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "error": "Error",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  },
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "tours": "Tours",
+    "packages": "Packages",
+    "travelBook": "Travel Guide",
+    "about": "About Us",
+    "contact": "Contact",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "dashboard": "Dashboard",
+    "myBookings": "My Bookings",
+    "wishlist": "Wishlist",
+    "settings": "Settings",
+    "signOut": "Sign Out"
+  },
+  "hero": {
+    "title": "Explore the Beauty",
+    "titleHighlight": "of Bali Island",
+    "subtitle": "Discover the best tourist destinations in Bali with specially designed tour packages for an unforgettable vacation experience",
+    "searchLabel": "Destination",
+    "searchPlaceholder": "Search destinations in Bali...",
+    "dateLabel": "Date",
+    "travelersLabel": "Travelers",
+    "searchButton": "Search Tours",
+    "stats": {
+      "destinations": "Bali Destinations",
+      "travelers": "Happy Travelers",
+      "rating": "Average Rating"
+    }
+  },
+  "featured": {
+    "title": "Featured Bali Destinations",
+    "subtitle": "Explore our handpicked selection of the best tourist destinations in the Island of Gods specially recommended for you",
+    "viewAll": "View All Destinations"
+  },
+  "destinations": {
+    "pageTitle": "Explore Bali Destinations",
+    "pageSubtitle": "Discover amazing places in the Island of Gods",
+    "searchPlaceholder": "Search tourist destinations in Bali...",
+    "resultsCount": "destinations found",
+    "noResults": "No destinations found.",
+    "noResultsHint": "Try adjusting your filters or search keywords.",
+    "from": "From",
+    "perPerson": "per person",
+    "reviews": "reviews"
+  },
+  "tours": {
+    "overview": "Tour Overview",
+    "duration": "Duration",
+    "groupSize": "Group Size",
+    "difficulty": "Difficulty",
+    "style": "Style",
+    "included": "What's Included",
+    "excluded": "What's Not Included",
+    "itinerary": "Detailed Itinerary",
+    "reviewsTitle": "Reviews & Ratings",
+    "pricePerPerson": "Price per person",
+    "bookNow": "Book Now",
+    "needHelp": "Need Help?",
+    "needHelpText": "Our travel experts are here to help you plan the perfect trip",
+    "contactUs": "Contact Us",
+    "features": {
+      "freeCancellation": "Free cancellation up to 24 hours",
+      "bestPrice": "Best price guarantee",
+      "expertGuides": "Expert local guides"
+    }
+  },
+  "footer": {
+    "description": "Trusted Bali tour specialist. We provide unforgettable vacation experiences with the best tourist destinations in the Island of Gods.",
+    "company": "Company",
+    "support": "Support",
+    "contact": "Contact Us",
+    "contactTitle": "Contact Us",
+    "address": "Jl. Raya Ubud No. 88, Gianyar, Bali 80571",
+    "phone": "+62 361 975 888",
+    "email": "info@okabalitravel.com",
+    "allRightsReserved": "All rights reserved.",
+    "copyright": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "links": {
+      "aboutUs": "About Us",
+      "careers": "Careers",
+      "press": "Media",
+      "blog": "Blog",
+      "helpCenter": "Help Center",
+      "contactUs": "Contact Us",
+      "faq": "FAQ",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    }
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Full Name",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "signInWith": "Sign in with",
+    "signUpWith": "Sign up with"
+  },
+  "booking": {
+    "selectDate": "Select Date",
+    "travelers": "Travelers",
+    "total": "Total",
+    "bookNow": "Book Now",
+    "bookingDetails": "Booking Details",
+    "personalInfo": "Personal Information",
+    "paymentInfo": "Payment Information",
+    "confirmBooking": "Confirm Booking"
+  },
+  "packages": {
+    "pageTitle": "Bali Travel Packages",
+    "pageSubtitle": "Discover our curated travel packages combining the best of Bali",
+    "resultsCount": "packages found",
+    "noResults": "No packages found.",
+    "noResultsHint": "Try adjusting your filters or search keywords.",
+    "bundle": "Bundle Package",
+    "deal": "Special Deal",
+    "preDesigned": "Pre-Designed Itinerary",
+    "custom": "Custom Package",
+    "includedTours": "Included Tours",
+    "highlights": "Package Highlights",
+    "totalPrice": "Total Price",
+    "dayNight": "Days/Nights"
+  },
+  "travelBook": {
+    "pageTitle": "Bali Travel Guide",
+    "pageSubtitle": "Explore Bali regency by regency with our comprehensive travel guides",
+    "noBooks": "Travel guides coming soon.",
+    "comingSoon": "We're preparing comprehensive guides for each Bali regency.",
+    "readGuide": "Read Guide",
+    "chapters": "Chapters",
+    "places": "Places",
+    "category": {
+      "beach": "Beach",
+      "temple": "Temple",
+      "culture": "Culture",
+      "nature": "Nature",
+      "restaurant": "Restaurant",
+      "shopping": "Shopping",
+      "adventure": "Adventure"
+    }
+  },
+  "meta": {
+    "homeTitle": "Bali Tours & Travel Packages - Explore the Island of Gods",
+    "homeDescription": "Trusted Bali tour specialist. Discover beautiful tourist destinations with specially designed tour packages for an unforgettable vacation.",
+    "destinationsTitle": "Bali Tourist Destinations - Best Places to Visit",
+    "toursTitle": "Bali Tour Packages - Complete Travel Experience",
+    "packagesTitle": "Bali Travel Packages - Curated Experiences",
+    "travelBookTitle": "Bali Travel Guide - Explore by Regency"
+  }
+}

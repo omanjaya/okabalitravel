@@ -1,0 +1,141 @@
+{
+  "common": {
+    "appName": "OkabaliTravel",
+    "currency": "JPY",
+    "search": "検索",
+    "viewAll": "すべて表示",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "close": "閉じる"
+  },
+  "nav": {
+    "home": "ホーム",
+    "destinations": "目的地",
+    "tours": "ツアー",
+    "packages": "パッケージ",
+    "travelBook": "旅行ガイド",
+    "about": "私たちについて",
+    "contact": "お問い合わせ",
+    "signIn": "ログイン",
+    "signUp": "新規登録",
+    "dashboard": "ダッシュボード",
+    "myBookings": "予約一覧",
+    "wishlist": "お気に入り",
+    "settings": "設定",
+    "signOut": "ログアウト"
+  },
+  "hero": {
+    "title": "バリ島の美しさを",
+    "titleHighlight": "探検しよう",
+    "subtitle": "特別に設計されたツアーパッケージで、バリ島最高の観光地を発見し、忘れられないバケーション体験をお楽しみください",
+    "searchLabel": "目的地",
+    "searchPlaceholder": "バリ島の目的地を検索...",
+    "dateLabel": "日付",
+    "travelersLabel": "旅行者数",
+    "searchButton": "ツアーを検索",
+    "stats": {
+      "destinations": "バリ島の目的地",
+      "travelers": "満足した旅行者",
+      "rating": "平均評価"
+    }
+  },
+  "featured": {
+    "title": "注目のバリ島目的地",
+    "subtitle": "神々の島で厳選された最高の観光地をご覧ください",
+    "viewAll": "すべての目的地を見る"
+  },
+  "destinations": {
+    "pageTitle": "バリ島の目的地を探索",
+    "pageSubtitle": "神々の島の素晴らしい場所を発見",
+    "searchPlaceholder": "バリ島の観光地を検索...",
+    "resultsCount": "件の目的地が見つかりました",
+    "noResults": "目的地が見つかりませんでした。",
+    "noResultsHint": "フィルターまたは検索キーワードを調整してください。",
+    "from": "から",
+    "perPerson": "1人あたり",
+    "reviews": "件のレビュー"
+  },
+  "tours": {
+    "overview": "ツアー概要",
+    "duration": "期間",
+    "groupSize": "グループサイズ",
+    "difficulty": "難易度",
+    "style": "スタイル",
+    "included": "含まれるもの",
+    "excluded": "含まれないもの",
+    "itinerary": "詳細な旅程",
+    "reviewsTitle": "レビューと評価",
+    "pricePerPerson": "1人あたりの価格",
+    "bookNow": "今すぐ予約",
+    "needHelp": "お困りですか？",
+    "needHelpText": "旅行の専門家が完璧な旅行計画をお手伝いします",
+    "contactUs": "お問い合わせ",
+    "features": {
+      "freeCancellation": "24時間前まで無料キャンセル",
+      "bestPrice": "最安値保証",
+      "expertGuides": "プロの現地ガイド"
+    }
+  },
+  "footer": {
+    "description": "信頼できるバリ島ツアーの専門家。神々の島の最高の観光地で忘れられないバケーション体験を提供します。",
+    "company": "会社",
+    "support": "サポート",
+    "contact": "お問い合わせ",
+    "contactTitle": "お問い合わせ",
+    "address": "Jl. Raya Ubud No. 88, Gianyar, Bali 80571",
+    "phone": "+62 361 975 888",
+    "email": "info@okabalitravel.com",
+    "allRightsReserved": "すべての権利予約済み。",
+    "copyright": "すべての権利予約済み。",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "cookiePolicy": "Cookieポリシー",
+    "links": {
+      "aboutUs": "私たちについて",
+      "careers": "採用情報",
+      "press": "プレス",
+      "blog": "ブログ",
+      "helpCenter": "ヘルプセンター",
+      "contactUs": "お問い合わせ",
+      "faq": "よくある質問",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー"
+    }
+  },
+  "auth": {
+    "signIn": "ログイン",
+    "signUp": "新規登録",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "name": "氏名",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "noAccount": "アカウントをお持ちでない方",
+    "haveAccount": "すでにアカウントをお持ちの方",
+    "signInWith": "ログイン方法",
+    "signUpWith": "登録方法"
+  },
+  "booking": {
+    "selectDate": "日付を選択",
+    "travelers": "旅行者",
+    "total": "合計",
+    "bookNow": "今すぐ予約",
+    "bookingDetails": "予約詳細",
+    "personalInfo": "個人情報",
+    "paymentInfo": "お支払い情報",
+    "confirmBooking": "予約を確認"
+  },
+  "meta": {
+    "homeTitle": "バリ島ツアー＆旅行パッケージ - 神々の島を探索",
+    "homeDescription": "信頼できるバリ島ツアーの専門家。忘れられないバケーションのために特別に設計されたツアーパッケージで、美しい観光地を発見してください。",
+    "destinationsTitle": "バリ島の観光地 - 訪れるべき最高の場所",
+    "toursTitle": "バリ島ツアーパッケージ - 完全な旅行体験"
+  }
+}

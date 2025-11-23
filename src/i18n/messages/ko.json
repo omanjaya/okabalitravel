@@ -1,0 +1,141 @@
+{
+  "common": {
+    "appName": "OkabaliTravel",
+    "currency": "KRW",
+    "search": "검색",
+    "viewAll": "모두 보기",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "submit": "제출",
+    "cancel": "취소",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "편집",
+    "close": "닫기"
+  },
+  "nav": {
+    "home": "홈",
+    "destinations": "목적지",
+    "tours": "투어",
+    "packages": "패키지",
+    "travelBook": "여행 가이드",
+    "about": "회사 소개",
+    "contact": "문의하기",
+    "signIn": "로그인",
+    "signUp": "회원가입",
+    "dashboard": "대시보드",
+    "myBookings": "내 예약",
+    "wishlist": "위시리스트",
+    "settings": "설정",
+    "signOut": "로그아웃"
+  },
+  "hero": {
+    "title": "발리 섬의 아름다움을",
+    "titleHighlight": "탐험하세요",
+    "subtitle": "잊지 못할 휴가 경험을 위해 특별히 설계된 투어 패키지로 발리 최고의 관광지를 발견하세요",
+    "searchLabel": "목적지",
+    "searchPlaceholder": "발리 목적지 검색...",
+    "dateLabel": "날짜",
+    "travelersLabel": "여행자 수",
+    "searchButton": "투어 검색",
+    "stats": {
+      "destinations": "발리 목적지",
+      "travelers": "만족한 여행자",
+      "rating": "평균 평점"
+    }
+  },
+  "featured": {
+    "title": "추천 발리 목적지",
+    "subtitle": "신들의 섬에서 엄선된 최고의 관광지를 탐험하세요",
+    "viewAll": "모든 목적지 보기"
+  },
+  "destinations": {
+    "pageTitle": "발리 목적지 탐험",
+    "pageSubtitle": "신들의 섬의 놀라운 장소 발견",
+    "searchPlaceholder": "발리 관광지 검색...",
+    "resultsCount": "개의 목적지를 찾았습니다",
+    "noResults": "목적지를 찾을 수 없습니다.",
+    "noResultsHint": "필터나 검색 키워드를 조정해 보세요.",
+    "from": "부터",
+    "perPerson": "1인당",
+    "reviews": "개의 리뷰"
+  },
+  "tours": {
+    "overview": "투어 개요",
+    "duration": "기간",
+    "groupSize": "그룹 크기",
+    "difficulty": "난이도",
+    "style": "스타일",
+    "included": "포함 사항",
+    "excluded": "불포함 사항",
+    "itinerary": "상세 일정",
+    "reviewsTitle": "리뷰 및 평점",
+    "pricePerPerson": "1인당 가격",
+    "bookNow": "지금 예약",
+    "needHelp": "도움이 필요하신가요?",
+    "needHelpText": "여행 전문가가 완벽한 여행 계획을 도와드립니다",
+    "contactUs": "문의하기",
+    "features": {
+      "freeCancellation": "24시간 전까지 무료 취소",
+      "bestPrice": "최저가 보장",
+      "expertGuides": "전문 현지 가이드"
+    }
+  },
+  "footer": {
+    "description": "신뢰할 수 있는 발리 투어 전문가. 신들의 섬 최고의 관광지에서 잊지 못할 휴가 경험을 제공합니다.",
+    "company": "회사",
+    "support": "지원",
+    "contact": "문의하기",
+    "contactTitle": "문의하기",
+    "address": "Jl. Raya Ubud No. 88, Gianyar, Bali 80571",
+    "phone": "+62 361 975 888",
+    "email": "info@okabalitravel.com",
+    "allRightsReserved": "모든 권리 보유.",
+    "copyright": "모든 권리 보유.",
+    "privacyPolicy": "개인정보 처리방침",
+    "termsOfService": "이용약관",
+    "cookiePolicy": "쿠키 정책",
+    "links": {
+      "aboutUs": "회사 소개",
+      "careers": "채용",
+      "press": "언론",
+      "blog": "블로그",
+      "helpCenter": "고객센터",
+      "contactUs": "문의하기",
+      "faq": "자주 묻는 질문",
+      "terms": "이용약관",
+      "privacy": "개인정보 처리방침"
+    }
+  },
+  "auth": {
+    "signIn": "로그인",
+    "signUp": "회원가입",
+    "email": "이메일",
+    "password": "비밀번호",
+    "name": "이름",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "noAccount": "계정이 없으신가요?",
+    "haveAccount": "이미 계정이 있으신가요?",
+    "signInWith": "로그인 방법",
+    "signUpWith": "가입 방법"
+  },
+  "booking": {
+    "selectDate": "날짜 선택",
+    "travelers": "여행자",
+    "total": "합계",
+    "bookNow": "지금 예약",
+    "bookingDetails": "예약 세부정보",
+    "personalInfo": "개인 정보",
+    "paymentInfo": "결제 정보",
+    "confirmBooking": "예약 확인"
+  },
+  "meta": {
+    "homeTitle": "발리 투어 및 여행 패키지 - 신들의 섬 탐험",
+    "homeDescription": "신뢰할 수 있는 발리 투어 전문가. 잊지 못할 휴가를 위해 특별히 설계된 투어 패키지로 아름다운 관광지를 발견하세요.",
+    "destinationsTitle": "발리 관광지 - 방문해야 할 최고의 장소",
+    "toursTitle": "발리 투어 패키지 - 완벽한 여행 경험"
+  }
+}

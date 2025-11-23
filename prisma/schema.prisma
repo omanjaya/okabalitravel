@@ -1,0 +1,541 @@
+// Prisma schema file for OkabaliTravel (SQLite for development)
+// For production, switch to PostgreSQL and uncomment array/enum types
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// User model for authentication and profiles
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String
+  password      String?   // For credentials login
+  avatar        String?
+  role          String    @default("USER") // USER, ADMIN, PARTNER
+  phone         String?
+  bio           String?
+  emailVerified DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  bookings         Booking[]
+  reviews          Review[]
+  accounts         Account[]
+  sessions         Session[]
+  wishlist         Wishlist[]
+  packageBookings  PackageBooking[]
+  packageWishlists PackageWishlist[]
+  packageReviews   PackageReview[]
+
+  @@index([email])
+}
+
+// NextAuth Account model
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+// NextAuth Session model
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// NextAuth Verification Token model
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// Wishlist model
+model Wishlist {
+  id            String       @id @default(cuid())
+  userId        String
+  destinationId String?
+  tourId        String?
+  createdAt     DateTime     @default(now())
+
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  destination Destination? @relation(fields: [destinationId], references: [id], onDelete: Cascade)
+  tour        Tour?        @relation(fields: [tourId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([destinationId])
+  @@index([tourId])
+}
+
+// Destination model
+model Destination {
+  id               String   @id @default(cuid())
+  name             String
+  slug             String   @unique
+  description      String
+  shortDescription String
+  country          String
+  continent        String
+  latitude         Float
+  longitude        Float
+  featured         Boolean  @default(false)
+  rating           Float    @default(0)
+  reviewCount      Int      @default(0)
+  currency         String   @default("USD")
+  timezone         String
+  bestTimeToVisit  String   // JSON array as string
+  languages        String   // JSON array as string
+  tags             String   // JSON array as string
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  images    DestinationImage[]
+  tours     Tour[]
+  wishlists Wishlist[]
+
+  @@index([slug])
+  @@index([featured])
+  @@index([continent])
+}
+
+model DestinationImage {
+  id            String      @id @default(cuid())
+  url           String
+  alt           String
+  caption       String?
+  isPrimary     Boolean     @default(false)
+  order         Int         @default(0)
+  destinationId String
+  destination   Destination @relation(fields: [destinationId], references: [id], onDelete: Cascade)
+
+  @@index([destinationId])
+}
+
+// Tour/Package model
+model Tour {
+  id               String      @id @default(cuid())
+  title            String
+  slug             String      @unique
+  description      String
+  shortDescription String
+  destinationId    String
+  destination      Destination @relation(fields: [destinationId], references: [id])
+  price            Float
+  currency         String      @default("USD")
+  discountPercent  Int?
+  duration         Int // in days
+  nights           Int
+  minGroupSize     Int         @default(1)
+  maxGroupSize     Int         @default(20)
+  difficulty       String      @default("MODERATE") // EASY, MODERATE, CHALLENGING, DIFFICULT
+  includes         String // JSON array as string
+  excludes         String // JSON array as string
+  amenities        String // JSON array as string
+  travelStyle      String // JSON array as string
+  featured         Boolean     @default(false)
+  rating           Float       @default(0)
+  reviewCount      Int         @default(0)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  images       TourImage[]
+  itinerary    ItineraryDay[]
+  bookings     Booking[]
+  reviews      Review[]
+  availability TourAvailability[]
+  wishlists    Wishlist[]
+  packageTours PackageTour[]
+
+  @@index([slug])
+  @@index([destinationId])
+  @@index([featured])
+}
+
+model TourImage {
+  id        String  @id @default(cuid())
+  url       String
+  alt       String
+  isPrimary Boolean @default(false)
+  order     Int     @default(0)
+  tourId    String
+  tour      Tour    @relation(fields: [tourId], references: [id], onDelete: Cascade)
+
+  @@index([tourId])
+}
+
+model ItineraryDay {
+  id            String @id @default(cuid())
+  day           Int
+  title         String
+  description   String
+  meals         String // JSON array as string
+  accommodation String?
+  activities    String // JSON array as string
+  tourId        String
+  tour          Tour   @relation(fields: [tourId], references: [id], onDelete: Cascade)
+
+  @@index([tourId])
+}
+
+model TourAvailability {
+  id             String   @id @default(cuid())
+  tourId         String
+  tour           Tour     @relation(fields: [tourId], references: [id], onDelete: Cascade)
+  startDate      DateTime
+  endDate        DateTime
+  availableSpots Int
+  price          Float?
+  currency       String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([tourId])
+  @@index([startDate])
+}
+
+// Booking model
+model Booking {
+  id                 String   @id @default(cuid())
+  userId             String
+  user               User     @relation(fields: [userId], references: [id])
+  tourId             String
+  tour               Tour     @relation(fields: [tourId], references: [id])
+  startDate          DateTime
+  endDate            DateTime
+  numberOfTravelers  Int
+  totalPrice         Float
+  currency           String   @default("USD")
+  status             String   @default("PENDING") // PENDING, CONFIRMED, CANCELLED, COMPLETED
+  paymentStatus      String   @default("PENDING") // PENDING, PAID, FAILED, REFUNDED
+  paymentId          String?
+  stripeSessionId    String?  // Stripe Checkout Session ID
+  specialRequests    String?
+  cancellationReason String?
+  cancelledAt        DateTime?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  travelers Traveler[]
+
+  @@index([userId])
+  @@index([tourId])
+  @@index([status])
+}
+
+model Traveler {
+  id             String   @id @default(cuid())
+  bookingId      String
+  booking        Booking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  firstName      String
+  lastName       String
+  email          String
+  phone          String
+  dateOfBirth    DateTime
+  nationality    String
+  passportNumber String?
+  isMainContact  Boolean  @default(false)
+
+  @@index([bookingId])
+}
+
+// Review model
+model Review {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  tourId    String
+  tour      Tour     @relation(fields: [tourId], references: [id])
+  rating    Int // 1-5
+  title     String
+  content   String
+  helpful   Int      @default(0)
+  verified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  images   ReviewImage[]
+  response ReviewResponse?
+
+  @@index([userId])
+  @@index([tourId])
+  @@index([rating])
+}
+
+model ReviewImage {
+  id       String @id @default(cuid())
+  reviewId String
+  review   Review @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  url      String
+  alt      String
+  order    Int    @default(0)
+
+  @@index([reviewId])
+}
+
+model ReviewResponse {
+  id          String   @id @default(cuid())
+  reviewId    String   @unique
+  review      Review   @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  content     String
+  respondedBy String
+  createdAt   DateTime @default(now())
+}
+
+// Package model for tour bundles, deals, and pre-designed itineraries
+model Package {
+  id               String   @id @default(cuid())
+  name             String
+  slug             String   @unique
+  description      String
+  shortDescription String
+  type             String   @default("BUNDLE") // BUNDLE, DEAL, PRE_DESIGNED, CUSTOM
+  price            Float
+  currency         String   @default("USD")
+  discountPercent  Int?
+  duration         Int      // total days
+  nights           Int
+  regency          String?  // Bali regency: Badung, Gianyar, etc.
+  featured         Boolean  @default(false)
+  rating           Float    @default(0)
+  reviewCount      Int      @default(0)
+  includes         String   // JSON array as string
+  excludes         String   // JSON array as string
+  highlights       String   // JSON array as string
+  minGroupSize     Int      @default(1)
+  maxGroupSize     Int      @default(20)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  images        PackageImage[]
+  packageTours  PackageTour[]
+  bookings      PackageBooking[]
+  wishlists     PackageWishlist[]
+  reviews       PackageReview[]
+
+  @@index([slug])
+  @@index([type])
+  @@index([regency])
+  @@index([featured])
+}
+
+model PackageImage {
+  id        String  @id @default(cuid())
+  url       String
+  alt       String
+  caption   String?
+  isPrimary Boolean @default(false)
+  order     Int     @default(0)
+  packageId String
+  package   Package @relation(fields: [packageId], references: [id], onDelete: Cascade)
+
+  @@index([packageId])
+}
+
+// Junction table linking packages to tours
+model PackageTour {
+  id          String  @id @default(cuid())
+  packageId   String
+  tourId      String
+  day         Int     // which day(s) in the package
+  optional    Boolean @default(false)
+  order       Int     @default(0)
+
+  package Package @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  tour    Tour    @relation(fields: [tourId], references: [id])
+
+  @@index([packageId])
+  @@index([tourId])
+}
+
+model PackageBooking {
+  id                 String   @id @default(cuid())
+  userId             String
+  user               User     @relation(fields: [userId], references: [id])
+  packageId          String
+  package            Package  @relation(fields: [packageId], references: [id])
+  startDate          DateTime
+  endDate            DateTime
+  numberOfTravelers  Int
+  totalPrice         Float
+  currency           String   @default("USD")
+  status             String   @default("PENDING") // PENDING, CONFIRMED, CANCELLED, COMPLETED
+  paymentStatus      String   @default("PENDING") // PENDING, PAID, FAILED, REFUNDED
+  paymentId          String?
+  stripeSessionId    String?
+  specialRequests    String?
+  cancellationReason String?
+  cancelledAt        DateTime?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  travelers PackageTraveler[]
+
+  @@index([userId])
+  @@index([packageId])
+  @@index([status])
+}
+
+model PackageTraveler {
+  id             String         @id @default(cuid())
+  bookingId      String
+  booking        PackageBooking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  firstName      String
+  lastName       String
+  email          String
+  phone          String
+  dateOfBirth    DateTime
+  nationality    String
+  passportNumber String?
+  isMainContact  Boolean        @default(false)
+
+  @@index([bookingId])
+}
+
+model PackageWishlist {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  packageId String
+  package   Package  @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([packageId])
+}
+
+model PackageReview {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  packageId String
+  package   Package  @relation(fields: [packageId], references: [id])
+  rating    Int      // 1-5
+  title     String
+  content   String
+  helpful   Int      @default(0)
+  verified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  images   PackageReviewImage[]
+  response PackageReviewResponse?
+
+  @@index([userId])
+  @@index([packageId])
+  @@index([rating])
+}
+
+model PackageReviewImage {
+  id       String        @id @default(cuid())
+  reviewId String
+  review   PackageReview @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  url      String
+  alt      String
+  order    Int           @default(0)
+
+  @@index([reviewId])
+}
+
+model PackageReviewResponse {
+  id          String        @id @default(cuid())
+  reviewId    String        @unique
+  review      PackageReview @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  content     String
+  respondedBy String
+  createdAt   DateTime      @default(now())
+}
+
+// Travel Book model for digital guidebooks organized by Bali regencies
+model TravelBook {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String
+  regency     String   // Badung, Gianyar, Tabanan, Klungkung, Karangasem, Bangli, Buleleng, Denpasar, Jembrana
+  coverImage  String
+  order       Int      @default(0)
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  chapters TravelBookChapter[]
+
+  @@index([slug])
+  @@index([regency])
+  @@index([published])
+}
+
+model TravelBookChapter {
+  id           String     @id @default(cuid())
+  travelBookId String
+  title        String
+  slug         String
+  description  String
+  order        Int        @default(0)
+
+  travelBook TravelBook        @relation(fields: [travelBookId], references: [id], onDelete: Cascade)
+  entries    TravelBookEntry[]
+
+  @@index([travelBookId])
+  @@index([slug])
+}
+
+model TravelBookEntry {
+  id          String            @id @default(cuid())
+  chapterId   String
+  title       String
+  description String
+  category    String            // BEACH, TEMPLE, CULTURE, NATURE, RESTAURANT, SHOPPING, ADVENTURE
+  latitude    Float?
+  longitude   Float?
+  address     String?
+  tips        String?           // JSON array as string
+  bestTime    String?
+  entryFee    String?
+  order       Int               @default(0)
+
+  chapter TravelBookChapter  @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+  images  TravelBookImage[]
+
+  @@index([chapterId])
+  @@index([category])
+}
+
+model TravelBookImage {
+  id      String          @id @default(cuid())
+  entryId String
+  url     String
+  caption String?
+  order   Int             @default(0)
+
+  entry TravelBookEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
+
+  @@index([entryId])
+}

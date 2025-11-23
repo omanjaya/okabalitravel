@@ -1,0 +1,141 @@
+{
+  "common": {
+    "appName": "OkabaliTravel",
+    "currency": "IDR",
+    "search": "Cari",
+    "viewAll": "Lihat Semua",
+    "loading": "Memuat...",
+    "error": "Kesalahan",
+    "back": "Kembali",
+    "next": "Selanjutnya",
+    "previous": "Sebelumnya",
+    "submit": "Kirim",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "close": "Tutup"
+  },
+  "nav": {
+    "home": "Beranda",
+    "destinations": "Destinasi",
+    "tours": "Paket Wisata",
+    "packages": "Paket Spesial",
+    "travelBook": "Panduan Wisata",
+    "about": "Tentang Kami",
+    "contact": "Kontak",
+    "signIn": "Masuk",
+    "signUp": "Daftar",
+    "dashboard": "Dasbor",
+    "myBookings": "Pemesanan Saya",
+    "wishlist": "Favorit",
+    "settings": "Pengaturan",
+    "signOut": "Keluar"
+  },
+  "hero": {
+    "title": "Jelajahi Keindahan",
+    "titleHighlight": "Pulau Bali",
+    "subtitle": "Temukan destinasi wisata terbaik di Bali dengan paket tour yang dirancang khusus untuk pengalaman liburan tak terlupakan",
+    "searchLabel": "Tujuan Wisata",
+    "searchPlaceholder": "Cari destinasi di Bali...",
+    "dateLabel": "Tanggal",
+    "travelersLabel": "Peserta",
+    "searchButton": "Cari Paket Wisata",
+    "stats": {
+      "destinations": "Destinasi Bali",
+      "travelers": "Wisatawan Puas",
+      "rating": "Rating Rata-rata"
+    }
+  },
+  "featured": {
+    "title": "Destinasi Unggulan Bali",
+    "subtitle": "Jelajahi pilihan destinasi wisata terbaik di Pulau Dewata yang kami rekomendasikan khusus untuk Anda",
+    "viewAll": "Lihat Semua Destinasi"
+  },
+  "destinations": {
+    "pageTitle": "Jelajahi Destinasi Bali",
+    "pageSubtitle": "Temukan tempat-tempat menakjubkan di Pulau Dewata",
+    "searchPlaceholder": "Cari destinasi wisata di Bali...",
+    "resultsCount": "destinasi ditemukan",
+    "noResults": "Tidak ada destinasi yang ditemukan.",
+    "noResultsHint": "Coba sesuaikan filter atau kata kunci pencarian Anda.",
+    "from": "Mulai dari",
+    "perPerson": "per orang",
+    "reviews": "ulasan"
+  },
+  "tours": {
+    "overview": "Ringkasan Tour",
+    "duration": "Durasi",
+    "groupSize": "Ukuran Grup",
+    "difficulty": "Tingkat Kesulitan",
+    "style": "Gaya",
+    "included": "Yang Termasuk",
+    "excluded": "Yang Tidak Termasuk",
+    "itinerary": "Itinerary Lengkap",
+    "reviewsTitle": "Ulasan & Rating",
+    "pricePerPerson": "Harga per orang",
+    "bookNow": "Pesan Sekarang",
+    "needHelp": "Butuh Bantuan?",
+    "needHelpText": "Ahli perjalanan kami siap membantu Anda merencanakan perjalanan sempurna",
+    "contactUs": "Hubungi Kami",
+    "features": {
+      "freeCancellation": "Pembatalan gratis hingga 24 jam",
+      "bestPrice": "Jaminan harga terbaik",
+      "expertGuides": "Pemandu lokal ahli"
+    }
+  },
+  "footer": {
+    "description": "Spesialis paket wisata Bali terpercaya. Kami menghadirkan pengalaman liburan tak terlupakan dengan destinasi wisata terbaik di Pulau Dewata.",
+    "company": "Perusahaan",
+    "support": "Bantuan",
+    "contact": "Hubungi Kami",
+    "contactTitle": "Hubungi Kami",
+    "address": "Jl. Raya Ubud No. 88, Gianyar, Bali 80571",
+    "phone": "+62 361 975 888",
+    "email": "info@okabalitravel.com",
+    "allRightsReserved": "Hak cipta dilindungi.",
+    "copyright": "Hak cipta dilindungi.",
+    "privacyPolicy": "Kebijakan Privasi",
+    "termsOfService": "Syarat Layanan",
+    "cookiePolicy": "Kebijakan Cookie",
+    "links": {
+      "aboutUs": "Tentang Kami",
+      "careers": "Karir",
+      "press": "Media",
+      "blog": "Blog",
+      "helpCenter": "Pusat Bantuan",
+      "contactUs": "Hubungi Kami",
+      "faq": "FAQ",
+      "terms": "Syarat Layanan",
+      "privacy": "Kebijakan Privasi"
+    }
+  },
+  "auth": {
+    "signIn": "Masuk",
+    "signUp": "Daftar",
+    "email": "Email",
+    "password": "Kata Sandi",
+    "name": "Nama Lengkap",
+    "forgotPassword": "Lupa Kata Sandi?",
+    "noAccount": "Belum punya akun?",
+    "haveAccount": "Sudah punya akun?",
+    "signInWith": "Masuk dengan",
+    "signUpWith": "Daftar dengan"
+  },
+  "booking": {
+    "selectDate": "Pilih Tanggal",
+    "travelers": "Peserta",
+    "total": "Total",
+    "bookNow": "Pesan Sekarang",
+    "bookingDetails": "Detail Pemesanan",
+    "personalInfo": "Informasi Pribadi",
+    "paymentInfo": "Informasi Pembayaran",
+    "confirmBooking": "Konfirmasi Pemesanan"
+  },
+  "meta": {
+    "homeTitle": "Paket Wisata & Tour Bali - Jelajahi Pulau Dewata",
+    "homeDescription": "Spesialis paket wisata Bali terpercaya. Temukan destinasi wisata indah dengan paket tour yang dirancang khusus untuk liburan tak terlupakan.",
+    "destinationsTitle": "Destinasi Wisata Bali - Tempat Terbaik untuk Dikunjungi",
+    "toursTitle": "Paket Tour Bali - Pengalaman Perjalanan Lengkap"
+  }
+}

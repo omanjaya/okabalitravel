@@ -1,0 +1,141 @@
+{
+  "common": {
+    "appName": "OkabaliTravel",
+    "currency": "CNY",
+    "search": "搜索",
+    "viewAll": "查看全部",
+    "loading": "加载中...",
+    "error": "错误",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "close": "关闭"
+  },
+  "nav": {
+    "home": "首页",
+    "destinations": "目的地",
+    "tours": "旅游套餐",
+    "packages": "特别套餐",
+    "travelBook": "旅游指南",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "signIn": "登录",
+    "signUp": "注册",
+    "dashboard": "控制面板",
+    "myBookings": "我的预订",
+    "wishlist": "收藏夹",
+    "settings": "设置",
+    "signOut": "退出登录"
+  },
+  "hero": {
+    "title": "探索巴厘岛",
+    "titleHighlight": "的美丽",
+    "subtitle": "发现巴厘岛最好的旅游景点，专为您打造难忘的度假体验",
+    "searchLabel": "目的地",
+    "searchPlaceholder": "搜索巴厘岛的目的地...",
+    "dateLabel": "日期",
+    "travelersLabel": "旅客人数",
+    "searchButton": "搜索旅游",
+    "stats": {
+      "destinations": "巴厘岛景点",
+      "travelers": "满意的游客",
+      "rating": "平均评分"
+    }
+  },
+  "featured": {
+    "title": "巴厘岛精选目的地",
+    "subtitle": "探索我们为您精心挑选的众神之岛最佳旅游目的地",
+    "viewAll": "查看所有目的地"
+  },
+  "destinations": {
+    "pageTitle": "探索巴厘岛目的地",
+    "pageSubtitle": "发现众神之岛的绝美之地",
+    "searchPlaceholder": "搜索巴厘岛的旅游目的地...",
+    "resultsCount": "个目的地",
+    "noResults": "未找到目的地。",
+    "noResultsHint": "尝试调整您的筛选条件或搜索关键词。",
+    "from": "起价",
+    "perPerson": "每人",
+    "reviews": "条评论"
+  },
+  "tours": {
+    "overview": "行程概览",
+    "duration": "时长",
+    "groupSize": "团队规模",
+    "difficulty": "难度等级",
+    "style": "旅行风格",
+    "included": "包含项目",
+    "excluded": "不包含项目",
+    "itinerary": "详细行程",
+    "reviewsTitle": "评论与评分",
+    "pricePerPerson": "每人价格",
+    "bookNow": "立即预订",
+    "needHelp": "需要帮助？",
+    "needHelpText": "我们的旅行专家随时为您提供帮助，规划完美的旅行",
+    "contactUs": "联系我们",
+    "features": {
+      "freeCancellation": "24小时内免费取消",
+      "bestPrice": "最优价格保证",
+      "expertGuides": "专业本地导游"
+    }
+  },
+  "footer": {
+    "description": "值得信赖的巴厘岛旅游专家。我们为您提供难忘的度假体验，带您游览众神之岛最好的旅游目的地。",
+    "company": "公司",
+    "support": "支持",
+    "contact": "联系我们",
+    "contactTitle": "联系我们",
+    "address": "Jl. Raya Ubud No. 88, Gianyar, Bali 80571",
+    "phone": "+62 361 975 888",
+    "email": "info@okabalitravel.com",
+    "allRightsReserved": "版权所有。",
+    "copyright": "版权所有。",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "cookiePolicy": "Cookie政策",
+    "links": {
+      "aboutUs": "关于我们",
+      "careers": "招聘",
+      "press": "媒体",
+      "blog": "博客",
+      "helpCenter": "帮助中心",
+      "contactUs": "联系我们",
+      "faq": "常见问题",
+      "terms": "服务条款",
+      "privacy": "隐私政策"
+    }
+  },
+  "auth": {
+    "signIn": "登录",
+    "signUp": "注册",
+    "email": "电子邮件",
+    "password": "密码",
+    "name": "全名",
+    "forgotPassword": "忘记密码？",
+    "noAccount": "还没有账户？",
+    "haveAccount": "已有账户？",
+    "signInWith": "使用以下方式登录",
+    "signUpWith": "使用以下方式注册"
+  },
+  "booking": {
+    "selectDate": "选择日期",
+    "travelers": "旅客",
+    "total": "总计",
+    "bookNow": "立即预订",
+    "bookingDetails": "预订详情",
+    "personalInfo": "个人信息",
+    "paymentInfo": "支付信息",
+    "confirmBooking": "确认预订"
+  },
+  "meta": {
+    "homeTitle": "巴厘岛旅游套餐 - 探索众神之岛",
+    "homeDescription": "值得信赖的巴厘岛旅游专家。探索美丽的旅游目的地，专为您打造难忘的度假体验。",
+    "destinationsTitle": "巴厘岛旅游目的地 - 最佳游览地点",
+    "toursTitle": "巴厘岛旅游套餐 - 完整的旅行体验"
+  }
+}
